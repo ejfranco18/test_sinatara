@@ -1,0 +1,15 @@
+<h1><%= @recipe.name %></h1>
+<h3><b>Category: </b><%= @recipe.description %></h3>
+<p><b>Prep time: </b><%= @recipe.prep_time %> min</p>
+
+<p><b>Ingredients: </b>
+<% @recipe.ingredients.split("-").each_with_index do |ing, index| %>
+  <% if index == 0 %>
+    <%= ing %>
+  <% else %>
+    <p><%= ing %></p>
+  <% end %>
+<% end %>
+
+
+

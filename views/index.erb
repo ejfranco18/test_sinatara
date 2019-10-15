@@ -1,0 +1,10 @@
+<h1>Recipes:</h1>
+
+<% @recipes.each do |re| %>
+<h3><a href="/recipes/<%= re.name %>"><%= re.name %></a> (<%= re.prep_time %> min)</h3>
+<% end %>
+
+<h2>Options:</h2>
+<h3><a href="/form">Add a new recipe</a></h3>
+<h3><a href="/remove">Remove a recipe</a></h3>
+<h3><a href="/import">Import a recipe</a></h3>

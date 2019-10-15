@@ -1,0 +1,12 @@
+<h1>Remove recipes</h1>
+
+<% @recipes.each_with_index do |recipe, index| %>
+<h3><%= index + 1 %> - <%= recipe.name %> (<%= recipe.prep_time %> min)</h3>
+<% end %>
+
+<h3>Select the recipe to remove:</h3>
+
+<form action="/remove_recipe" method="post">
+  Recipe index: <input type="text" name="recipe_index"><br>
+  <input type="submit" value="Submit" class=myButton>
+</form>
